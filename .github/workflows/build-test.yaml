@@ -9,10 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: |
-          mkdir dir
-          touch test dir/test
-          tar cvf test.tar test dir
-          rm -rf test dir
-          tar xvf test.tar
       - run: podman build -t test -f Dockerfile .
