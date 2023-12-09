@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: |
+          mkdir dir && chmod 0755 dir
       - run: podman build -t test -f Dockerfile .
